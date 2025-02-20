@@ -1,5 +1,5 @@
 ## About Me
-Hi! I'm Jarred Boere, a passionate software developer with experience in full-stack development, machine learning, and web development. I enjoy solving challenging problems and continuously learning new technologies. I am an MSc Cognitive Systems master's student at the
+Hi! I'm Jarred, a passionate software developer with experience in full-stack development, machine learning, and web development. I enjoy solving challenging problems and continuously learning new technologies. I am an MSc Cognitive Systems master's student at the
 University of Potsdam, focusing on Machine Learning, Artificial Intelligence and Natural Language Processing
 (NLP). 
 
