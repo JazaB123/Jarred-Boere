@@ -23,6 +23,10 @@ and optimizing the site for tracking and analytics. The goal was to enhance the 
 digital presence, streamline operations, and drive customer engagement through a
 seamless, automated workflow.
 
+---
+
+### 3. [Event Management System](https://github.com/JazaB123/EventManagementSystem.git)
+**Description**: This project is an Event Management System built with C Sharp, designed to manage events by allowing users to create, update, and view event details. It features a console-based interface where users can update event information such as name, description, date, and location. The system validates inputs, ensures data integrity, and allows users to modify event details while maintaining a clean and user-friendly flow. The project uses essential C# concepts like object-oriented programming, nullable types, and exception handling to ensure a robust and efficient event management process.
 
 ---
 
