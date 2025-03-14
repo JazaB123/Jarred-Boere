@@ -5,20 +5,28 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: "Rationale", serif;
-    font-weight: 500;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
     font-style: normal;
   }
 
+  h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
 
   :root{
-    --background: #000000;
-    --second-background: #000000; 
+    --background: #ffffff;
+    --second-background: #ffffff;
   }
   
   body {
     min-height: 100vh;
     background-color: var(--background);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   nav{
@@ -29,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
   }
@@ -41,7 +49,7 @@
   }
   
   nav ul a{
-    color: white;
+    color: rgb(0, 0, 0);
     opacity: 0.7;
     transition: 0.2s ease-in-out;
   }
@@ -52,7 +60,7 @@
 
   .logo{
     font-size: 2em;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 800;
     opacity: 0.8;
     transition: 0.2s ease-in-out;
@@ -75,37 +83,37 @@
     font-size: 2em;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    color:#FEE715;
+    color:#000000;
   }
   .nav-socials i:hover{
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   .btn{
     padding: 0.7em 1.5em;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 0.5em;
     font-size: 1.1em;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
     transition: 0.3s ease-in-out;
   }
 
   .btn:hover{
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     color: var(--background);
   }
 
   span{
-    background: #FEE715;
+    background: #000000;
     background-clip: text;
     color: transparent;
   }
   
   #menu{
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 3em;
     display: none;
   }
@@ -121,7 +129,7 @@
     align-items: center;
     justify-content: center;
     gap: 2em;
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   #home img{
@@ -156,7 +164,7 @@
   }
 
   ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom, #ffffff , #FEE715);
+    background: linear-gradient(to bottom, #000000 , #868686);
   }
 
   #about{
@@ -183,7 +191,7 @@
     font-size: 5em;
   }
   .about-box p{
-    color: white;
+    color: rgb(0, 0, 0);
     opacity: 0.8;
   }
 
@@ -198,7 +206,7 @@
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: rgb(0, 0, 0);
     opacity: 0.8;
     align-items: baseline;
   }
@@ -224,7 +232,7 @@
 
   #projects {
     background-color: var(--second-background);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 5em 0;
     text-align: center;
   }
@@ -242,7 +250,7 @@
   }
   
   .project-box {
-    background-color: #000000;
+    background-color: #ffffff;
     padding: 2em;
     border-radius: 1em;
     transition: transform 0.3s ease-in-out;
@@ -265,20 +273,20 @@
   
   .project-box .btn {
     padding: 0.7em 1.5em;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 500;
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     transition: 0.3s ease-in-out;
   }
   
   .project-box .btn:hover {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     color: var(--background);
   }
 
   #experience {
     background-color: var(--second-background);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 5em 0;
     text-align: center;
   }
@@ -329,7 +337,7 @@
     font-style: italic;
     margin-bottom: 1em;
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     opacity: 0.8;
   }
   
@@ -357,7 +365,7 @@
   }
 
   #education {
-    background-color: #000000;
+    background-color: #ffffff;
   }
   
   .header {
@@ -373,53 +381,53 @@
   }
   
   .box {
-    border: 3px solid #000000;
+    border: 3px solid #ffffff;
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure even spacing */
+    justify-content: space-between; 
     align-items: flex-start;
     overflow: hidden;
     object-fit: cover;
     padding: 2em;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    min-height: 400px; /* Added min-height for consistent box size */
+    min-height: 400px; 
   }
   
   .box:hover {
-    border: 3px solid white;
+    border: 3px solid rgb(0, 0, 0);
   }
   
   .box h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 0.5em;
-    width: 100%; /* Ensures all h1 elements align */
+    width: 100%;
   }
   
   .box h2 {
     font-size: 1.5em;
     margin-bottom: 1em;
-    width: 100%; /* Ensures all h2 elements align */
+    width: 100%;
   }
   
   .box p {
     opacity: 0.8;
     line-height: 1.5;
-    width: 100%; /* Ensures all paragraphs align */
-    flex-grow: 1; /* Ensures the text fills the box */
+    width: 100%;
+    flex-grow: 1;
   }
   
   .box img {
     min-width: 100px;
     max-width: 200px;
     border-radius: 0.5em;
-    align-self: center; /* Centers the image */
+    align-self: center;
   }
 
   #contact{
-    background-color: #000000;
+    background-color: #ffffff;
   }
 
   form{
@@ -450,7 +458,7 @@
   }
 
   form input:focus{
-    background-color: rgba(229, 229, 229);
+    background-color: rgb(0, 0, 0);
   }
 
   footer {
@@ -459,7 +467,7 @@
     justify-content: center;
     gap: 10em;
     bottom: 0;
-    background-color: #000000;
+    background-color: #ffffff;
     width: 100%;
     padding: 5em 15%;
   }
@@ -483,7 +491,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    color: white;
+    color: rgb(0, 0, 0);
     max-width: 500px;
   }
   .col-right span{
@@ -499,10 +507,10 @@
     font-size: 2em;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    color:#FEE715;
+    color: #000000;
   }
   .social-icons i:hover{
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   @media(max-width:968px){
@@ -522,7 +530,7 @@
       width: 100%;
       right: 0;
       padding: 1em 3em;
-      color: white;
+      color: rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -533,7 +541,7 @@
       margin: 2em;
       display: block;
       font-size: 1.5em;
-      color: white;
+      color: rgb(0, 0, 0);
     }
     .links.active{
       display: block;
