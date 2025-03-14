@@ -49,7 +49,7 @@
   }
   
   nav ul a{
-    color: rgb(0, 0, 0);
+    color: #000000;
     opacity: 0.7;
     transition: 0.2s ease-in-out;
   }
@@ -60,7 +60,7 @@
 
   .logo{
     font-size: 2em;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-weight: 800;
     opacity: 0.8;
     transition: 0.2s ease-in-out;
@@ -86,23 +86,23 @@
     color:#000000;
   }
   .nav-socials i:hover{
-    color: rgb(0, 0, 0);
+    color: #000000;
   }
 
   .btn{
     padding: 0.7em 1.5em;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 0.5em;
     font-size: 1.1em;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #000000;
     cursor: pointer;
     transition: 0.3s ease-in-out;
   }
 
   .btn:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
     color: var(--background);
   }
 
@@ -113,7 +113,7 @@
   }
   
   #menu{
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-size: 3em;
     display: none;
   }
@@ -129,7 +129,7 @@
     align-items: center;
     justify-content: center;
     gap: 2em;
-    color: rgb(0, 0, 0);
+    color: #000000;
   }
 
   #home img{
@@ -191,7 +191,7 @@
     font-size: 5em;
   }
   .about-box p{
-    color: rgb(0, 0, 0);
+    color: #000000;
     opacity: 0.8;
   }
 
@@ -206,7 +206,7 @@
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    color: rgb(0, 0, 0);
+    color: #000000;
     opacity: 0.8;
     align-items: baseline;
   }
@@ -232,7 +232,7 @@
 
   #projects {
     background-color: var(--second-background);
-    color: rgb(0, 0, 0);
+    color: #000000;
     padding: 5em 0;
     text-align: center;
   }
@@ -273,20 +273,20 @@
   
   .project-box .btn {
     padding: 0.7em 1.5em;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-weight: 500;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #000000;
     transition: 0.3s ease-in-out;
   }
   
   .project-box .btn:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
     color: var(--background);
   }
 
   #experience {
     background-color: var(--second-background);
-    color: rgb(0, 0, 0);
+    color: #000000;
     padding: 5em 0;
     text-align: center;
   }
@@ -337,7 +337,7 @@
     font-style: italic;
     margin-bottom: 1em;
     display: block;
-    color: rgb(0, 0, 0);
+    color: #000000;
     opacity: 0.8;
   }
   
@@ -390,14 +390,14 @@
     overflow: hidden;
     object-fit: cover;
     padding: 2em;
-    color: rgb(0, 0, 0);
+    color: #000000;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     min-height: 400px; 
   }
   
   .box:hover {
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid #000000;
   }
   
   .box h1 {
@@ -458,7 +458,7 @@
   }
 
   form input:focus{
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
   }
 
   footer {
@@ -491,7 +491,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    color: rgb(0, 0, 0);
+    color: #000000;
     max-width: 500px;
   }
   .col-right span{
@@ -530,7 +530,7 @@
       width: 100%;
       right: 0;
       padding: 1em 3em;
-      color: rgb(0, 0, 0);
+      color: #000000;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -541,7 +541,7 @@
       margin: 2em;
       display: block;
       font-size: 1.5em;
-      color: rgb(0, 0, 0);
+      color: #000000;
     }
     .links.active{
       display: block;
