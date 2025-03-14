@@ -636,7 +636,7 @@
       position: absolute;
       top: 100%; 
       left: 0;
-      width: 100%;
+      width: 100vw;
       padding: 1em 0;
       color: #ffffff;
       background-color: rgba(15, 15, 15, 0.8);
@@ -644,6 +644,7 @@
       flex-direction: column;
       text-align: center;
       z-index: 999;
+      overflow-x: hidden;
     }
 
     .links a {
@@ -676,8 +677,8 @@
       color: #000;
     }
 
-    #education .header h1 {
-      font-size: 2em;
+    #education .header{
+      font-size: 4em;
     }
 
     footer {
