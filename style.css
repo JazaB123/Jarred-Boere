@@ -581,7 +581,7 @@
     }
 
     #home h1 {
-      font-size: 1.8em;
+      font-size: 2.5em;
     }
 
     #home h3 {
@@ -594,6 +594,14 @@
 
     #about .skills {
       gap: 2.5em;
+    }
+
+    #experience h1{
+      font-size: 1.8em;
+    }
+
+    #projects h1{
+      font-size: 1.8em;
     }
 
     #contact .header {
