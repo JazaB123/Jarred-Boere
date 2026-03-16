@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import asset from '../../lib/asset';
 
 interface TaskbarProps {
   openWindows: { id: string; title: string }[];
@@ -28,7 +29,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ openWindows, onWindowClick, activeWin
       {/* Start Button */}
       <button className="win98-btn flex items-center gap-1.5 px-2 py-0.5 font-bold text-sm h-7">
         <img
-          src="/windows-0.png"
+          src={asset('windows-0.png')}
           alt="Start"
           width={16}
           height={16}

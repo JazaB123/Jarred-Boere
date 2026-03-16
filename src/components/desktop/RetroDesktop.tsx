@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import asset from '../../lib/asset';
 import BootSplash from '../ui/BootSplash';
 import DesktopIcon from './DesktopIcon';
 import RetroWindow from './RetroWindow';
@@ -30,14 +31,14 @@ const WINDOW_CONTENT: Record<WindowId, React.ReactNode> = {
 };
 
 const DESKTOP_ICONS: { id: WindowId | 'cv' | 'github' | 'linkedin'; label: string; src: string; href?: string }[] = [
-  { id: 'experience', label: 'Experience', src: '/computer-4.png'         },
-  { id: 'projects',   label: 'Projects',   src: '/directory_closed-5.png' },
-  { id: 'education',  label: 'Education',  src: '/world-2.png'            },
-  { id: 'about',      label: 'About Me',   src: '/msagent-4.png'          },
-  { id: 'snake',      label: 'Snake',      src: '/joystick.png'           },
-  { id: 'cv',         label: 'My CV',      src: '/file_lines-0.png',  href: '/Jarred Boere - CV 2026.pdf'             },
-  { id: 'github',     label: 'GitHub',     src: '/github-icon.png',   href: 'https://github.com/JazaB123'             },
-  { id: 'linkedin',   label: 'LinkedIn',   src: '/linkedin-icon.png', href: 'https://www.linkedin.com/in/jarred-boere' },
+  { id: 'experience', label: 'Experience', src: asset('computer-4.png')         },
+  { id: 'projects',   label: 'Projects',   src: asset('directory_closed-5.png') },
+  { id: 'education',  label: 'Education',  src: asset('world-2.png')            },
+  { id: 'about',      label: 'About Me',   src: asset('msagent-4.png')          },
+  { id: 'snake',      label: 'Snake',      src: asset('joystick.png')           },
+  { id: 'cv',         label: 'My CV',      src: asset('file_lines-0.png'),  href: asset('Jarred Boere - CV 2026.pdf')        },
+  { id: 'github',     label: 'GitHub',     src: asset('github-icon.png'),   href: 'https://github.com/JazaB123'              },
+  { id: 'linkedin',   label: 'LinkedIn',   src: asset('linkedin-icon.png'), href: 'https://www.linkedin.com/in/jarred-boere' },
 ];
 
 const INITIAL_WINDOWS: WindowState[] = [

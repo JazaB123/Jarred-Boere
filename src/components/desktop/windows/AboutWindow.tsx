@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { User, Code2, Coffee, MapPin, Mail, Linkedin, GitBranch } from 'lucide-react';
+import asset from '../../../lib/asset';
 
 const skills = [
   { category: 'Frontend',  items: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GSAP', 'Three.js', 'Vite'] },
@@ -41,7 +42,7 @@ const AboutWindow: React.FC = () => {
       {/* Profile — stack vertically on mobile */}
       <div className={`flex mb-4 ${isMobile ? 'flex-col items-center text-center gap-2' : 'gap-4'}`}>
         <img
-          src="/GradPhoto.jpg"
+          src={asset('GradPhoto.jpg')}
           alt="Jarred Boere"
           className={`object-cover border-2 border-[#808080] flex-shrink-0 ${isMobile ? 'w-24 h-24' : 'w-28 h-28'}`}
         />

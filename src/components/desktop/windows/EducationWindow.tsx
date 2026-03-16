@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GraduationCap } from 'lucide-react';
+import asset from '../../../lib/asset';
 
 const education = [
   {
@@ -7,14 +8,14 @@ const education = [
     institution: 'University of Potsdam',
     period: '2024 – Present',
     details: 'Interdisciplinary program spanning Natural Language Processing, machine learning, and AI systems. Focused on building intelligent systems and modelling human cognitive processes through hands-on research.',
-    logo: '/UniversityOfPotsdam.png',
+    logo: asset('UniversityOfPotsdam.png'),
   },
   {
     degree: 'BIT Information Systems',
     institution: 'University of Pretoria',
     period: '2020 – 2023',
     details: 'Trained in the application of computer and information systems in organisations. Covers systems design, mobile development, data manipulation, and business analysis — bridging technical programming with real-world problem solving.',
-    logo: '/UniversityOfPretoria.png',
+    logo: asset('UniversityOfPretoria.png'),
   },
 ];
 
