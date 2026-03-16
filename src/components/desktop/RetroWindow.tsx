@@ -6,24 +6,31 @@ interface RetroWindowProps {
   title: string;
   onClose: () => void;
   onFocus: () => void;
+  onMinimize: () => void;
+  isMinimized: boolean;
   zIndex: number;
   children: React.ReactNode;
   defaultX?: number;
   defaultY?: number;
+  isMobile?: boolean;
+  noPadding?: boolean;
 }
 
 const RetroWindow: React.FC<RetroWindowProps> = ({
   title,
   onClose,
   onFocus,
+  onMinimize,
+  isMinimized,
   zIndex,
   children,
   defaultX = 40,
   defaultY = 30,
+  isMobile = false,
+  noPadding = false,
 }) => {
   const [pos, setPos] = useState({ x: defaultX, y: defaultY });
   const [isMaximized, setIsMaximized] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
   const dragRef = useRef<{ startX: number; startY: number; origX: number; origY: number } | null>(null);
   const windowRef = useRef<HTMLDivElement>(null);
 
@@ -69,10 +76,10 @@ const RetroWindow: React.FC<RetroWindowProps> = ({
           onMouseDown={onFocus}
           style={{
             position: 'absolute',
-            left: isMaximized ? 0 : pos.x,
-            top: isMaximized ? 0 : pos.y,
-            width: isMaximized ? '100%' : 'min(700px, calc(100% - 20px))',
-            height: isMaximized ? 'calc(100% - 36px)' : 'auto',
+            left: isMobile ? 0 : (isMaximized ? 0 : pos.x),
+            top: isMobile ? 0 : (isMaximized ? 0 : pos.y),
+            width: isMobile ? '100%' : (isMaximized ? '100%' : 'min(700px, calc(100% - 20px))'),
+            height: isMobile ? '100%' : (isMaximized ? 'calc(100% - 36px)' : 'auto'),
             zIndex,
           }}
           className="flex flex-col bg-[#c0c0c0] win98-raised overflow-hidden"
@@ -86,7 +93,7 @@ const RetroWindow: React.FC<RetroWindowProps> = ({
             <div className="flex gap-1 flex-shrink-0">
               <button
                 onMouseDown={(e) => e.stopPropagation()}
-                onClick={() => setIsMinimized(true)}
+                onClick={() => onMinimize()}
                 className="win98-btn w-5 h-5 flex items-center justify-center p-0 text-xs"
                 title="Minimize"
               >
@@ -121,7 +128,11 @@ const RetroWindow: React.FC<RetroWindowProps> = ({
           </div>
 
           {/* Content */}
-          <div className="flex-1 overflow-y-auto p-3 win98-sunken m-2 bg-white min-h-[300px] max-h-[400px]">
+          <div className={
+            noPadding
+              ? 'flex-1 overflow-hidden win98-sunken m-2'
+              : `flex-1 overflow-y-auto p-3 win98-sunken m-2 bg-white ${isMobile ? 'min-h-0 max-h-full' : 'min-h-[300px] max-h-[400px]'}`
+          }>
             {children}
           </div>
 

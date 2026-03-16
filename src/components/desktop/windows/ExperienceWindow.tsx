@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
@@ -49,6 +49,14 @@ const experiences = [
 ];
 
 const ExperienceWindow: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   return (
     <div className="font-mono text-sm">
       <div className="flex items-center gap-2 mb-3 pb-2 border-b border-[#808080]">
@@ -59,7 +67,7 @@ const ExperienceWindow: React.FC = () => {
       <div className="space-y-4">
         {experiences.map((exp, i) => (
           <div key={i} className="border-l-4 border-[#000080] pl-3">
-            <div className="flex items-start justify-between gap-2">
+            <div className={`flex gap-2 ${isMobile ? 'flex-col' : 'items-start justify-between'}`}>
               <div>
                 <div className="font-bold text-[#000080]">{exp.role}</div>
                 <div className="text-[#333] font-semibold">{exp.company}</div>

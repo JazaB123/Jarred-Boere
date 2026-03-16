@@ -12,6 +12,7 @@ const DesktopIcon: React.FC<DesktopIconProps> = ({ label, src, onClick, isActive
     <button
       onDoubleClick={onClick}
       onClick={(e) => { if (e.detail === 2) return; }}
+      onTouchEnd={(e) => { e.preventDefault(); onClick(); }}
       className={`
         flex flex-col items-center gap-1 p-2 w-20 cursor-default select-none focus:outline-none
         ${isActive ? 'bg-[#000080]/40' : 'hover:bg-white/20'}

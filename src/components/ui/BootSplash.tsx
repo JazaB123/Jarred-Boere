@@ -24,7 +24,15 @@ const LINE_DELAY = 200;
 const BootSplash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
   const [visibleCount, setVisibleCount] = useState(0);
   const [exiting, setExiting] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const logRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Scroll the log container itself, not the page
   useEffect(() => {
@@ -60,14 +68,14 @@ const BootSplash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
     <AnimatePresence>
       {!exiting && (
         <motion.div
-          className="absolute inset-0 z-50 bg-black flex flex-col items-center justify-center p-8"
+          className={`absolute inset-0 z-50 bg-black flex flex-col items-center justify-center ${isMobile ? 'p-4' : 'p-8'}`}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.9 }}
         >
           {/* ASCII header box */}
-          <div className="mb-8 text-center">
+          <div className={`text-center ${isMobile ? 'mb-4' : 'mb-8'}`}>
             <div
-              className="font-mono text-xs tracking-[0.4em] mb-4 uppercase"
+              className={`font-mono text-xs mb-4 uppercase ${isMobile ? 'tracking-[0.15em]' : 'tracking-[0.4em]'}`}
               style={{ color: '#00f0ff99' }}
             >
               ▸ system boot sequence
@@ -77,17 +85,23 @@ const BootSplash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
               style={{
                 color: '#00f0ff',
                 textShadow: '0 0 12px #00f0ff, 0 0 30px #00f0ff55',
-                fontSize: 'clamp(1rem, 3.5vw, 2rem)',
+                fontSize: isMobile ? '0.6rem' : 'clamp(1rem, 3.5vw, 2rem)',
               }}
             >
-{`╔══════════════════════════════════════╗
+              {isMobile
+? `╔═══════════════════╗
+║                   ║
+║  J A R R E D . O S║
+║                   ║
+╚═══════════════════╝`
+: `╔══════════════════════════════════════╗
 ║                                      ║
 ║     J  A  R  R  E  D  . O  S        ║
 ║                                      ║
 ╚══════════════════════════════════════╝`}
             </pre>
             <div
-              className="font-mono text-xs mt-3 tracking-[0.3em]"
+              className={`font-mono text-xs mt-3 ${isMobile ? 'tracking-[0.1em]' : 'tracking-[0.3em]'}`}
               style={{ color: '#ffffff33' }}
             >
               FULL-STACK DEVELOPER  //  Berlin
