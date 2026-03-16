@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LINES = [
-  { text: 'JARRED.OS BIOS v1.0 — Copyright © 2025 Jarred Boere', dim: false },
+  { text: 'JARRED.OS BIOS v1.0 — Copyright © 2026 Jarred Boere', dim: false },
   { text: 'CPU: FULL-STACK PROCESSOR @ 4.20GHz ........... OK', dim: true },
   { text: 'RAM: 16384MB DDR5 — Testing ................... OK', dim: true },
   { text: '', dim: true },

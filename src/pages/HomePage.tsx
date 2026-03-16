@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-[#505070] text-xs font-mono"
+              className="text-[#505070] text-sm font-mono"
             >
               Berlin, Germany
             </motion.p>
@@ -70,7 +70,7 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <footer className="relative py-8 text-center border-t border-[#1a1a3a]">
         <p className="text-[#303050] font-mono text-xs">
-          © 2025 Jarred Boere — Built with React, Three.js &amp; Framer Motion
+          © 2026 Jarred Boere — Built with React, Three.js &amp; Framer Motion
         </p>
       </footer>
     </main>

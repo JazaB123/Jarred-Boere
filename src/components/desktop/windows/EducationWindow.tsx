@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { GraduationCap } from 'lucide-react';
 
 const education = [
@@ -19,6 +19,14 @@ const education = [
 ];
 
 const EducationWindow: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   return (
     <div className="font-mono text-sm">
       <div className="flex items-center gap-2 mb-3 pb-2 border-b border-[#808080]">
@@ -28,7 +36,7 @@ const EducationWindow: React.FC = () => {
 
       <div className="space-y-3">
         {education.map((edu, i) => (
-          <div key={i} className="border border-[#808080] p-2 bg-[#f0f0f0] flex gap-3">
+          <div key={i} className={`border border-[#808080] p-2 bg-[#f0f0f0] flex gap-3 ${isMobile ? 'flex-col items-center text-center' : ''}`}>
             <img
               src={edu.logo}
               alt={edu.institution}

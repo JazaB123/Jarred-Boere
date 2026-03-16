@@ -43,7 +43,7 @@ const projects = [
     description:
       'Built from scratch for a home renovation business. Features a multi-category image gallery with 300+ project photos, a contact/quote request system with server-side email delivery, rate limiting, and input validation.',
     tech: ['React', 'Node.js', 'TypeScript', 'Tailwind CSS', 'Express', 'Vite', 'Resend'],
-    github: '#',
+    github: 'https://github.com/JazaB123/mr-home-repair',
     live: 'https://mrhomerepair.co.za/',
     status: 'LIVE',
   },
@@ -79,7 +79,7 @@ const projects = [
     description:
       'A retro Windows 98 desktop experience built with React, Three.js WebGL shader background, Framer Motion scroll animations, and fully draggable/resizable windows.',
     tech: ['React', 'Three.js', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
-    github: '#',
+    github: 'https://github.com/JazaB123/Jarred-Boere',
     live: '#',
     status: 'LIVE',
   },

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { User, Code2, Coffee, MapPin, Mail, Linkedin, GitBranch } from 'lucide-react';
 
 const skills = [
-  { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'REST APIs'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'Figma', 'VS Code', 'Linux'] },
+  { category: 'Frontend',  items: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GSAP', 'Three.js', 'Vite'] },
+  { category: 'Backend',   items: ['Node.js', 'Express', 'Python', 'C#', 'ASP.NET Core', 'PostgreSQL', 'SQL'] },
+  { category: 'AI & Data', items: ['LangGraph', 'LLMs', 'Pandas', 'NumPy', 'Pymunk'] },
+  { category: 'Tools',     items: ['Git', 'VS Code', 'Railway', 'Resend', 'npm'] },
 ];
 
 const AboutWindow: React.FC = () => {
@@ -59,7 +60,7 @@ const AboutWindow: React.FC = () => {
       </div>
 
       <p className="text-xs text-[#333] leading-relaxed mb-3 border-l-2 border-[#000080] pl-2">
-        Passionate full-stack developer with 3+ years of experience building scalable web applications.
+        Passionate full-stack developer with 4+ years of experience building scalable web applications.
         Currently pursuing my masters degree studying an M.Sc Cognitive Systems at the University of Potsdam.
         I love turning complex problems into elegant, intuitive interfaces. When not coding, I'm exploring
         new technologies, contributing to open source, or bouldering.

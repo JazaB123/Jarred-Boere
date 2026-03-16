@@ -59,7 +59,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ openWindows, onWindowClick, activeWin
 
       {/* System tray */}
       <div
-        className="flex items-center px-2 h-6 text-xs font-mono"
+        className="flex items-center px-2 h-6 text-xs font-mono text-black"
         style={{
           borderTop: '1px solid #808080',
           borderLeft: '1px solid #808080',
